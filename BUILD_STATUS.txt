@@ -1,0 +1,249 @@
+BUILD/TEST FAIL
+
+[  7%] [32mBuilding C object CMakeFiles/beva_static.dir/src/vector.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/beva_static.dir/src/status.c.o[0m
+/mnt/data/BEVA2/BEVA/src/vector.c: In function ‘beva_vector_copy’:
+/mnt/data/BEVA2/BEVA/src/vector.c:14:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   14 |     if(!d||!s)return BEVA_ERR_NULL; beva_status e=beva_vector_init(d,s->n); if(e)return e;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/vector.c:14:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   14 |     if(!d||!s)return BEVA_ERR_NULL; beva_status e=beva_vector_init(d,s->n); if(e)return e;
+      |                                     ^~~~~~~~~~~
+/mnt/data/BEVA2/BEVA/src/vector.c:15:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   15 |     if(s->n)memcpy(d->data,s->data,s->n*sizeof(double)); return BEVA_OK;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/vector.c:15:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   15 |     if(s->n)memcpy(d->data,s->data,s->n*sizeof(double)); return BEVA_OK;
+      |                                                          ^~~~~~
+/mnt/data/BEVA2/BEVA/src/vector.c: In function ‘beva_vector_dot’:
+/mnt/data/BEVA2/BEVA/src/vector.c:20:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   20 |     if(!a||!b||a->n!=b->n)return NAN; double s=0,c=0;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/vector.c:20:39: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   20 |     if(!a||!b||a->n!=b->n)return NAN; double s=0,c=0;
+      |                                       ^~~~~~
+/mnt/data/BEVA2/BEVA/src/vector.c: In function ‘beva_vector_sub_scaled’:
+/mnt/data/BEVA2/BEVA/src/vector.c:27:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   27 |     if(!v||!u)return BEVA_ERR_NULL;if(v->n!=u->n)return BEVA_ERR_DIMENSION;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/vector.c:27:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   27 |     if(!v||!u)return BEVA_ERR_NULL;if(v->n!=u->n)return BEVA_ERR_DIMENSION;
+      |                                    ^~
+/mnt/data/BEVA2/BEVA/src/vector.c:28:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   28 |     for(size_t i=0;i<v->n;i++)v->data[i]-=a*u->data[i];return BEVA_OK;
+      |     ^~~
+/mnt/data/BEVA2/BEVA/src/vector.c:28:56: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   28 |     for(size_t i=0;i<v->n;i++)v->data[i]-=a*u->data[i];return BEVA_OK;
+      |                                                        ^~~~~~
+/mnt/data/BEVA2/BEVA/src/vector.c: In function ‘beva_vector_gram_schmidt’:
+/mnt/data/BEVA2/BEVA/src/vector.c:31:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   31 |     if(!in||!out)return BEVA_ERR_NULL;if(in->n!=out->n)return BEVA_ERR_DIMENSION;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/vector.c:31:39: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   31 |     if(!in||!out)return BEVA_ERR_NULL;if(in->n!=out->n)return BEVA_ERR_DIMENSION;
+      |                                       ^~
+[ 21%] [32mBuilding C object CMakeFiles/beva_static.dir/src/matrix.c.o[0m
+/mnt/data/BEVA2/BEVA/src/matrix.c: In function ‘beva_matrix_init’:
+/mnt/data/BEVA2/BEVA/src/matrix.c:11:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   11 |     if(!m)return BEVA_ERR_NULL;m->rows=r;m->cols=c;m->data=NULL;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c:11:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   11 |     if(!m)return BEVA_ERR_NULL;m->rows=r;m->cols=c;m->data=NULL;
+      |                                ^
+/mnt/data/BEVA2/BEVA/src/matrix.c: In function ‘beva_matrix_copy’:
+/mnt/data/BEVA2/BEVA/src/matrix.c:17:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   17 |     if(!d||!s)return BEVA_ERR_NULL;beva_status e=beva_matrix_init(d,s->rows,s->cols);if(e)return e;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c:17:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   17 |     if(!d||!s)return BEVA_ERR_NULL;beva_status e=beva_matrix_init(d,s->rows,s->cols);if(e)return e;
+      |                                    ^~~~~~~~~~~
+/mnt/data/BEVA2/BEVA/src/matrix.c:18:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   18 |     if(s->data)memcpy(d->data,s->data,s->rows*s->cols*sizeof(double));return BEVA_OK;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c:18:71: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   18 |     if(s->data)memcpy(d->data,s->data,s->rows*s->cols*sizeof(double));return BEVA_OK;
+      |                                                                       ^~~~~~
+/mnt/data/BEVA2/BEVA/src/matrix.c: In function ‘beva_matrix_mul’:
+/mnt/data/BEVA2/BEVA/src/matrix.c:26:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   26 |     if(!a||!b||!out)return BEVA_ERR_NULL;if(a->cols!=b->rows)return BEVA_ERR_DIMENSION;beva_status e=beva_matrix_init(out,a->rows,b->cols);if(e)return e;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c:26:42: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   26 |     if(!a||!b||!out)return BEVA_ERR_NULL;if(a->cols!=b->rows)return BEVA_ERR_DIMENSION;beva_status e=beva_matrix_init(out,a->rows,b->cols);if(e)return e;
+      |                                          ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c:27:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   27 |     for(size_t i=0;i<a->rows;i++)for(size_t k=0;k<a->cols;k++){double x=a->data[i*a->cols+k];for(size_t j=0;j<b->cols;j++)out->data[i*out->cols+j]+=x*b->data[k*b->cols+j];}return BEVA_OK;
+      |     ^~~
+/mnt/data/BEVA2/BEVA/src/matrix.c:27:173: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   27 |     for(size_t i=0;i<a->rows;i++)for(size_t k=0;k<a->cols;k++){double x=a->data[i*a->cols+k];for(size_t j=0;j<b->cols;j++)out->data[i*out->cols+j]+=x*b->data[k*b->cols+j];}return BEVA_OK;
+      |                                                                                                                                                                             ^~~~~~
+/mnt/data/BEVA2/BEVA/src/matrix.c: In function ‘beva_matrix_solve’:
+/mnt/data/BEVA2/BEVA/src/matrix.c:33:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   33 |     if(!a||!b||!x)return BEVA_ERR_NULL;if(a->rows!=a->cols||b->n!=a->rows)return BEVA_ERR_DIMENSION;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c:33:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   33 |     if(!a||!b||!x)return BEVA_ERR_NULL;if(a->rows!=a->cols||b->n!=a->rows)return BEVA_ERR_DIMENSION;
+      |                                        ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c: In function ‘beva_matrix_inverse’:
+/mnt/data/BEVA2/BEVA/src/matrix.c:40:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   40 |     if(!a||!out)return BEVA_ERR_NULL;if(a->rows!=a->cols)return BEVA_ERR_DIMENSION;size_t n=a->rows;beva_status e=beva_matrix_identity(out,n);if(e)return e;double *m=malloc(n*n*sizeof(double));if(!m){beva_matrix_free(out);return BEVA_ERR_ALLOC;}memcpy(m,a->data,n*n*sizeof(double));double tol=tol_for(a);
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c:40:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   40 |     if(!a||!out)return BEVA_ERR_NULL;if(a->rows!=a->cols)return BEVA_ERR_DIMENSION;size_t n=a->rows;beva_status e=beva_matrix_identity(out,n);if(e)return e;double *m=malloc(n*n*sizeof(double));if(!m){beva_matrix_free(out);return BEVA_ERR_ALLOC;}memcpy(m,a->data,n*n*sizeof(double));double tol=tol_for(a);
+      |                                      ^~
+/mnt/data/BEVA2/BEVA/src/matrix.c: At top level:
+/mnt/data/BEVA2/BEVA/src/matrix.c:9:12: warning: ‘valid’ defined but not used [-Wunused-function]
+    9 | static int valid(const beva_matrix*m){return m&&m->rows<=SIZE_MAX/m->cols;}
+      |            ^~~~~
+[ 28%] [32mBuilding C object CMakeFiles/beva_static.dir/src/lattice.c.o[0m
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘safe_row_add’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:11:46: warning: ISO C does not support ‘__int128’ types [-Wpedantic]
+   11 |     size_t n=b->cols;for(size_t j=0;j<n;j++){__int128 z=(__int128)b->data[dst*n+j]+(__int128)k*b->data[src*n+j];if(z>INT64_MAX||z<INT64_MIN)return BEVA_ERR_OVERFLOW;T->data[dst*n+j]=(int64_t)z;}return BEVA_OK;
+      |                                              ^~~~~~~~
+/mnt/data/BEVA2/BEVA/src/lattice.c:11:58: warning: ISO C does not support ‘__int128’ types [-Wpedantic]
+   11 |     size_t n=b->cols;for(size_t j=0;j<n;j++){__int128 z=(__int128)b->data[dst*n+j]+(__int128)k*b->data[src*n+j];if(z>INT64_MAX||z<INT64_MIN)return BEVA_ERR_OVERFLOW;T->data[dst*n+j]=(int64_t)z;}return BEVA_OK;
+      |                                                          ^~~~~~~~
+/mnt/data/BEVA2/BEVA/src/lattice.c:11:85: warning: ISO C does not support ‘__int128’ types [-Wpedantic]
+   11 |     size_t n=b->cols;for(size_t j=0;j<n;j++){__int128 z=(__int128)b->data[dst*n+j]+(__int128)k*b->data[src*n+j];if(z>INT64_MAX||z<INT64_MIN)return BEVA_ERR_OVERFLOW;T->data[dst*n+j]=(int64_t)z;}return BEVA_OK;
+      |                                                                                     ^~~~~~~~
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘beva_lattice_gso’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:24:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   24 |     if(!b||!bs||!mu||!n2)return BEVA_ERR_NULL;if(!b->rows||!b->cols||b->rows>b->cols)return BEVA_ERR_DIMENSION;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:24:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   24 |     if(!b||!bs||!mu||!n2)return BEVA_ERR_NULL;if(!b->rows||!b->cols||b->rows>b->cols)return BEVA_ERR_DIMENSION;
+      |                                               ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘beva_lattice_lll’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:30:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |     if(!b)return BEVA_ERR_NULL;if(b->rows==0||b->rows>b->cols)return BEVA_ERR_DIMENSION;beva_lll_options o=opt?*opt:beva_lll_default_options();if(o.delta<=0.25||o.delta>=1||o.eta<=0||o.eta>0.5||!o.max_iterations)return BEVA_ERR_INVALID;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:30:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |     if(!b)return BEVA_ERR_NULL;if(b->rows==0||b->rows>b->cols)return BEVA_ERR_DIMENSION;beva_lll_options o=opt?*opt:beva_lll_default_options();if(o.delta<=0.25||o.delta>=1||o.eta<=0||o.eta>0.5||!o.max_iterations)return BEVA_ERR_INVALID;
+      |                                ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:40:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   40 |             if(st)st->size_reductions++;e=beva_lattice_gso(b,&bs,&mu,n2);if(e)goto done;
+      |             ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:40:41: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   40 |             if(st)st->size_reductions++;e=beva_lattice_gso(b,&bs,&mu,n2);if(e)goto done;
+      |                                         ^
+/mnt/data/BEVA2/BEVA/src/lattice.c:47:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   47 |             if(st)st->swaps++;if(k>1)k--;e=beva_lattice_gso(b,&bs,&mu,n2);if(e)goto done;
+      |             ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:47:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |             if(st)st->swaps++;if(k>1)k--;e=beva_lattice_gso(b,&bs,&mu,n2);if(e)goto done;
+      |                               ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘beva_lattice_volume’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:57:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   57 |     if(!b||!out)return BEVA_ERR_NULL;if(b->rows>b->cols)return BEVA_ERR_DIMENSION;beva_matrix bs,mu;double*n=calloc(b->rows,sizeof(double));if(!n)return BEVA_ERR_ALLOC;beva_status e=beva_lattice_gso(b,&bs,&mu,n);if(e){free(n);return e;}double v=1;for(size_t i=0;i<b->rows;i++)v*=sqrt(n[i]);*out=v;beva_matrix_free(&bs);beva_matrix_free(&mu);free(n);return BEVA_OK;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:57:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   57 |     if(!b||!out)return BEVA_ERR_NULL;if(b->rows>b->cols)return BEVA_ERR_DIMENSION;beva_matrix bs,mu;double*n=calloc(b->rows,sizeof(double));if(!n)return BEVA_ERR_ALLOC;beva_status e=beva_lattice_gso(b,&bs,&mu,n);if(e){free(n);return e;}double v=1;for(size_t i=0;i<b->rows;i++)v*=sqrt(n[i]);*out=v;beva_matrix_free(&bs);beva_matrix_free(&mu);free(n);return BEVA_OK;
+      |                                      ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘beva_lattice_orthogonality_defect’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:60:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   60 |     if(!b||!out)return BEVA_ERR_NULL;double vol;beva_status e=beva_lattice_volume(b,&vol);if(e)return e;if(vol==0)return BEVA_ERR_DOMAIN;double p=1;for(size_t i=0;i<b->rows;i++){double s=0;for(size_t j=0;j<b->cols;j++){double x=(double)b->data[i*b->cols+j];s+=x*x;}p*=sqrt(s);}*out=p/vol;return BEVA_OK;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:60:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   60 |     if(!b||!out)return BEVA_ERR_NULL;double vol;beva_status e=beva_lattice_volume(b,&vol);if(e)return e;if(vol==0)return BEVA_ERR_DOMAIN;double p=1;for(size_t i=0;i<b->rows;i++){double s=0;for(size_t j=0;j<b->cols;j++){double x=(double)b->data[i*b->cols+j];s+=x*x;}p*=sqrt(s);}*out=p/vol;return BEVA_OK;
+      |                                      ^~~~~~
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘beva_lattice_is_reduced’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:63:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   63 |     if(!b||!out)return BEVA_ERR_NULL;beva_lll_options o=beva_lll_default_options();o.delta=delta;o.eta=eta;o.max_iterations=1;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:63:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   63 |     if(!b||!out)return BEVA_ERR_NULL;beva_lll_options o=beva_lll_default_options();o.delta=delta;o.eta=eta;o.max_iterations=1;
+      |                                      ^~~~~~~~~~~~~~~~
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘beva_lattice_nearest_plane’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:69:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   69 |     if(!b||!target||!out)return BEVA_ERR_NULL;if(b->rows>b->cols)return BEVA_ERR_DIMENSION;size_t m=b->rows,n=b->cols;beva_matrix bs,mu;double*n2=calloc(m,sizeof(double));if(!n2)return BEVA_ERR_ALLOC;beva_status e=beva_lattice_gso(b,&bs,&mu,n2);if(e){free(n2);return e;}
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:69:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   69 |     if(!b||!target||!out)return BEVA_ERR_NULL;if(b->rows>b->cols)return BEVA_ERR_DIMENSION;size_t m=b->rows,n=b->cols;beva_matrix bs,mu;double*n2=calloc(m,sizeof(double));if(!n2)return BEVA_ERR_ALLOC;beva_status e=beva_lattice_gso(b,&bs,&mu,n2);if(e){free(n2);return e;}
+      |                                               ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:72:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   72 |     for(size_t j=0;j<n;j++)out[j]=target[j]-res[j];if(distance){double d=0;for(size_t j=0;j<n;j++){double z=target[j]-out[j];d+=z*z;}*distance=sqrt(d);}free(y);free(res);beva_matrix_free(&bs);beva_matrix_free(&mu);free(n2);return BEVA_OK;
+      |     ^~~
+/mnt/data/BEVA2/BEVA/src/lattice.c:72:52: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   72 |     for(size_t j=0;j<n;j++)out[j]=target[j]-res[j];if(distance){double d=0;for(size_t j=0;j<n;j++){double z=target[j]-out[j];d+=z*z;}*distance=sqrt(d);}free(y);free(res);beva_matrix_free(&bs);beva_matrix_free(&mu);free(n2);return BEVA_OK;
+      |                                                    ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c: In function ‘beva_lattice_babai’:
+/mnt/data/BEVA2/BEVA/src/lattice.c:75:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   75 |     if(!b||!target||!coeff)return BEVA_ERR_NULL;if(b->rows>b->cols)return BEVA_ERR_DIMENSION;size_t m=b->rows,n=b->cols;beva_matrix bs,mu;double*n2=calloc(m,sizeof(double));if(!n2)return BEVA_ERR_ALLOC;beva_status e=beva_lattice_gso(b,&bs,&mu,n2);if(e){free(n2);return e;}double*res=malloc(n*sizeof(double));if(!res){beva_matrix_free(&bs);beva_matrix_free(&mu);free(n2);return BEVA_ERR_ALLOC;}memcpy(res,target,n*sizeof(double));for(size_t i=0;i<m;i++)coeff[i]=0;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/lattice.c:75:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   75 |     if(!b||!target||!coeff)return BEVA_ERR_NULL;if(b->rows>b->cols)return BEVA_ERR_DIMENSION;size_t m=b->rows,n=b->cols;beva_matrix bs,mu;double*n2=calloc(m,sizeof(double));if(!n2)return BEVA_ERR_ALLOC;beva_status e=beva_lattice_gso(b,&bs,&mu,n2);if(e){free(n2);return e;}double*res=malloc(n*sizeof(double));if(!res){beva_matrix_free(&bs);beva_matrix_free(&mu);free(n2);return BEVA_ERR_ALLOC;}memcpy(res,target,n*sizeof(double));for(size_t i=0;i<m;i++)coeff[i]=0;
+      |                                                 ^~
+[ 35%] [32mBuilding C object CMakeFiles/beva_static.dir/src/qr.c.o[0m
+/mnt/data/BEVA2/BEVA/src/qr.c: In function ‘beva_qr_mgs’:
+/mnt/data/BEVA2/BEVA/src/qr.c:7:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    7 |     if(!a||!q||!r)return BEVA_ERR_NULL;if(a->rows<a->cols)return BEVA_ERR_DIMENSION;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/qr.c:7:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+    7 |     if(!a||!q||!r)return BEVA_ERR_NULL;if(a->rows<a->cols)return BEVA_ERR_DIMENSION;
+      |                                        ^~
+/mnt/data/BEVA2/BEVA/src/qr.c: In function ‘beva_qr_solve’:
+/mnt/data/BEVA2/BEVA/src/qr.c:13:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   13 |     if(!a||!b||!x)return BEVA_ERR_NULL;if(a->rows<a->cols||b->n!=a->rows)return BEVA_ERR_DIMENSION;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/qr.c:13:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   13 |     if(!a||!b||!x)return BEVA_ERR_NULL;if(a->rows<a->cols||b->n!=a->rows)return BEVA_ERR_DIMENSION;
+      |                                        ^~
+[ 42%] [32mBuilding C object CMakeFiles/beva_static.dir/src/number_theory.c.o[0m
+/mnt/data/BEVA2/BEVA/src/number_theory.c: In function ‘beva_extended_gcd_i64’:
+/mnt/data/BEVA2/BEVA/src/number_theory.c:8:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    8 |     if(!g||!x||!y)return BEVA_ERR_NULL;__int128 old_r=a,r=b,old_s=1,s=0,old_t=0,t=1;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/number_theory.c:8:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+    8 |     if(!g||!x||!y)return BEVA_ERR_NULL;__int128 old_r=a,r=b,old_s=1,s=0,old_t=0,t=1;
+      |                                        ^~~~~~~~
+/mnt/data/BEVA2/BEVA/src/number_theory.c:8:40: warning: ISO C does not support ‘__int128’ types [-Wpedantic]
+/mnt/data/BEVA2/BEVA/src/number_theory.c:9:14: warning: ISO C does not support ‘__int128’ types [-Wpedantic]
+    9 |     while(r){__int128 q=old_r/r;__int128 z=old_r-q*r;old_r=r;r=z;z=old_s-q*s;old_s=s;s=z;z=old_t-q*t;old_t=t;t=z;}
+      |              ^~~~~~~~
+/mnt/data/BEVA2/BEVA/src/number_theory.c:9:33: warning: ISO C does not support ‘__int128’ types [-Wpedantic]
+    9 |     while(r){__int128 q=old_r/r;__int128 z=old_r-q*r;old_r=r;r=z;z=old_s-q*s;old_s=s;s=z;z=old_t-q*t;old_t=t;t=z;}
+      |                                 ^~~~~~~~
+[ 50%] [32mBuilding C object CMakeFiles/beva_static.dir/src/decomposition.c.o[0m
+/mnt/data/BEVA2/BEVA/src/decomposition.c: In function ‘beva_cholesky’:
+/mnt/data/BEVA2/BEVA/src/decomposition.c:6:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    6 |     if(!a||!l)return BEVA_ERR_NULL;if(a->rows!=a->cols)return BEVA_ERR_DIMENSION;size_t n=a->rows;beva_status e=beva_matrix_init(l,n,n);if(e)return e;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/decomposition.c:6:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+    6 |     if(!a||!l)return BEVA_ERR_NULL;if(a->rows!=a->cols)return BEVA_ERR_DIMENSION;size_t n=a->rows;beva_status e=beva_matrix_init(l,n,n);if(e)return e;
+      |                                    ^~
+/mnt/data/BEVA2/BEVA/src/decomposition.c:7:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+    7 |     for(size_t i=0;i<n;i++)for(size_t j=0;j<=i;j++){double s=a->data[i*n+j];for(size_t k=0;k<j;k++)s-=l->data[i*n+k]*l->data[j*n+k];if(i==j){if(s<=0){beva_matrix_free(l);return BEVA_ERR_DOMAIN;}l->data[i*n+j]=sqrt(s);}else l->data[i*n+j]=s/l->data[j*n+j];}return BEVA_OK;
+      |     ^~~
+/mnt/data/BEVA2/BEVA/src/decomposition.c:7:257: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+    7 |     for(size_t i=0;i<n;i++)for(size_t j=0;j<=i;j++){double s=a->data[i*n+j];for(size_t k=0;k<j;k++)s-=l->data[i*n+k]*l->data[j*n+k];if(i==j){if(s<=0){beva_matrix_free(l);return BEVA_ERR_DOMAIN;}l->data[i*n+j]=sqrt(s);}else l->data[i*n+j]=s/l->data[j*n+j];}return BEVA_OK;
+      |                                                                                                                                                                                                                                                                 ^~~~~~
+/mnt/data/BEVA2/BEVA/src/decomposition.c: In function ‘beva_power_iteration’:
+/mnt/data/BEVA2/BEVA/src/decomposition.c:10:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |     if(!a||!v||!lambda)return BEVA_ERR_NULL;if(a->rows!=a->cols||!a->rows)return BEVA_ERR_DIMENSION;size_t n=a->rows;if(max_iter==0)max_iter=1000;if(tol<=0)tol=1e-10;
+      |     ^~
+/mnt/data/BEVA2/BEVA/src/decomposition.c:10:45: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |     if(!a||!v||!lambda)return BEVA_ERR_NULL;if(a->rows!=a->cols||!a->rows)return BEVA_ERR_DIMENSION;size_t n=a->rows;if(max_iter==0)max_iter=1000;if(tol<=0)tol=1e-10;
+      |                                             ^~
+[ 57%] [32mBuilding C object CMakeFiles/beva_static.dir/src/physics.c.o[0m
+[ 64%] [32mBuilding C object CMakeFiles/beva_static.dir/src/quantum.c.o[0m
+[ 71%] [32m[1mLinking C static library libbeva.a[0m
+[ 71%] Built target beva_static
+[ 78%] [32mBuilding C object CMakeFiles/beva_tests.dir/tests/test_beva.c.o[0m
+[ 85%] [32mBuilding C object CMakeFiles/beva_example.dir/examples/example.c.o[0m
+[ 92%] [32m[1mLinking C executable beva_tests[0m
+[100%] [32m[1mLinking C executable beva_example[0m
+[100%] Built target beva_tests
+[100%] Built target beva_example
+
+Internal ctest changing into directory: /mnt/data/BEVA2/BEVA/build
+Test project /mnt/data/BEVA2/BEVA/build
+    Start 1: beva_tests
+1/1 Test #1: beva_tests .......................***Exception: SegFault  0.00 sec
+
+
+0% tests passed[0;0m, [0;31m1 tests failed[0;0m out of 1
+
+Total Test time (real) =   0.01 sec
+
+The following tests FAILED:
+	[0;31m  1 - beva_tests (SEGFAULT)[0;0m
+Errors while running CTest
